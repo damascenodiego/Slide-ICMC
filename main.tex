@@ -1,0 +1,116 @@
+% Template customized by Diego Damasceno (damascenodiego@usp.br)
+% Based on Rouben Rostamian's beamer template
+% URL: http://userpages.umbc.edu/~rostamia/beamer/
+
+\documentclass[xcolor=pdftex,dvipsnames,aspectratio=169]{beamer}
+%\usetheme{Boadilla}
+\usetheme{Malmoe}
+%\usetheme{boxes}
+%\usetheme{default}
+
+\usepackage[brazil]{babel}   
+\usepackage[latin1]{inputenc}
+
+% \usepackage{enumitem}
+\usepackage{caption}
+\usepackage{transparent}
+
+\setbeamertemplate{caption}[numbered]
+
+%see more color names on http://www.math.umbc.edu/~rouben/beamer/quickstart-Z-H-24.html
+\definecolor{uspblue}{RGB}{17,96,165} 
+\usecolortheme[named=uspblue]{structure} 
+
+%Use RGB colours instead of names
+%\usecolortheme[RGB={205,173,0}]{structure} 
+
+%download from http://www.math.umbc.edu/~rouben/beamer/beamer-umbc.tar.gz
+\useoutertheme{umbcfootline} 
+
+
+%Not needed if the umbcfootline outertheme is used:
+\setbeamertemplate{navigation symbols}{}
+
+%Custom footline. More options (also without the ``short'') part:
+%\insertshortauthor, \insertshortinstitute, \insertshorttitle, \insertshortsubtitle, \insertshortdate, \insertframenumber{}, \inserttotalframenumber
+\setfootline{\insertshortauthor, \insertshortinstitute \hfill \inserttitle 
+    \hfill slide \insertframenumber{} /\inserttotalframenumber} 
+ 
+
+
+%Set the background image.
+\setbeamertemplate{background 
+canvas}
+{\transparent{0.25}\includegraphics[width=\paperwidth,height=\paperheight]{logos/usp_bg.png}}
+
+
+\title[short title]{Long title}
+%\subtitle[short subtitle]{with OU/Comlab logos}
+%\author[Diego Damasceno]{Carlos Diego Nascimento Damasceno}
+\author[short name author]{ long name author} \institute[short institute]{long institute  \href{mailto:mail@mail.com}{mail (at) mail (dot) com }} 
+
+
+\begin{document}
+\begin{frame}
+	\maketitle
+\end{frame}
+
+\begin{frame}{Section}
+\begin{itemize}
+\item item\ldots
+\begin{itemize}
+	\item item\ldots
+\end{itemize}
+\end{itemize}
+
+\begin{theorem}
+It is impossible to separate any power higher than the second into two like powers.
+\end{theorem}
+
+\end{frame}
+
+\begin{frame}{Two Columns}
+    \begin{columns}[c] % the "c" option specifies center vertical alignment
+    \begin{column}[c]{.5\textwidth} % column designated by a command
+    	\begin{itemize}
+  		\item testing
+  		\item whatever\ldots
+		\end{itemize}
+    \end{column}
+    \begin{column}[c]{.5\textwidth} % column designated by a command
+		\begin{figure}
+		\centering
+		\captionsetup{justification=centering}
+		\includegraphics[width=.5\textwidth]{logos/cnpq_logo.png}
+		\caption{my caption \cite{aReference}}
+		\end{figure}
+    \end{column}
+    \end{columns}
+
+\end{frame}
+
+
+%referencias
+\begin{frame}{References}
+\bibliographystyle{sbc}
+\bibliography{refs}
+\end{frame}
+
+\begin{frame}
+	%\maketitle
+	\begin{center}
+	\Huge{Thank you!}
+	\\~	\\~
+	\begin{figure}
+	\captionsetup{justification=centering}
+	\includegraphics[height=30pt]{logos/garland_logo_mini.png}
+	~~~\includegraphics[height=30pt]{logos/icmc_logo_mini.jpg}
+	~~~\includegraphics[height=30pt]{logos/usp-logo-png_mini.png}
+	~~~\includegraphics[height=30pt]{logos/cnpq_logo.png}
+	\end{figure}
+	
+	\end{center}
+\end{frame}
+
+
+\end{document}
